@@ -6,7 +6,7 @@ import io from "socket.io-client";
 export const SocketContext = createContext();
 
 export const SocketProvider = ({ children }) => {
-  const { data } = useAppSelector((state) => state.user);
+  // const { data } = useAppSelector((state) => state.user);
   const [socket, setSocket] = useState(null);
 
 
@@ -21,7 +21,7 @@ export const SocketProvider = ({ children }) => {
     });
 
     socketInstance.on("connect_error", (err) => {
-      // console.log(`connect_error due to ${err}`)
+      console.log(`connect_error due to ${err}`)
     });
 
     if (userId && socketInstance) {

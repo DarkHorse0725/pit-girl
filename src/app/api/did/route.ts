@@ -1,9 +1,3 @@
-// app/api/openai/route.ts
-import { streamText } from "ai";
-import { generateText } from 'ai';
-
-import { createOpenAI } from '@ai-sdk/openai';
-
 
 export const runtime = "edge";
 
